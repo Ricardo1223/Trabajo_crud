@@ -1,7 +1,6 @@
 <?php
 	include 'Conexion.php';
-	include 'header.php';
-
+	include'Header.php';
 	if (isset($_GET['id'])) {
 		$id=$_GET['id'];
 		$resultado = $mysqli->query("SELECT * FROM trabajadores WHERE id=$id");

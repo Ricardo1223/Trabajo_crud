@@ -4,18 +4,29 @@
 ?>
 <div class="container p-8">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-8 mx-auto">
+		<div class="col-xs-12 col-sm-6 col-md-8 mx-auto mb-3">
 			<h1>Registrar departamento</h1>
 			<div class="card card-body">
-				<form action="Departamento.php" method="POST">
+				<form action="Departamento.php" method="POST" class="needs-validation" novalidate="">
 					<div class="form-group">
-						<label>Departamento:</label>
-						<input type="text" name="Departamento" class="form-control" placeholder="Departamento">
+						<div class="form-row">
+							<div class="col-md-12 md-12">
+							<label for="validationTooltip01">Departamento:</label>
+							<input type="text" name="Departamento" id="validationTooltip01" class="form-control" placeholder="Departamento" required>
+							<div class="valid-tooltip">Bien</div>
+							<div class="invalid-tooltip">Obligatorio</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-md-12 md-12">
+							<label for="validationTooltip02">Descripción:</label>
+							<textarea  required name="Descripcion" id="validationTooltip02" class="form-control" placeholder="Descripción"></textarea>
+							<div class="valid-tooltip">Bien</div>
+							<div class="invalid-tooltip">Obligatorio</div>
+							</div>
+						</div>
 					</div>
-					<div class="form-group">
-						<label>Descripción:</label>
-						<input type="text" name="Descripcion" class="form-control" placeholder="Descripcion">
-					</div>
+
 					<div class="form-group">
 						<input type="submit" name="guardar" value="Guardar"class="btn btn-success btn-block">
 					</div>

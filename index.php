@@ -1,6 +1,7 @@
+
 <?php
-	include'header.php';
 	include'Conexion.php';
+	include'Header.php';
 ?>
 	<div class="col-xs-12 col-sm-6 col-md-8 mx-auto">
 		<h1>Trabajadores</h1>
@@ -11,7 +12,7 @@
 					<th>Apellido Parterno</th>
 					<th>Apellido Materno</th>
 					<th>Sueldo</th>
-					<th>Fecha de naciminet</th>
+					<th>Fecha de nacimineto</th>
 					<th>Puesto</th>
 					<th>Acción</th>
 				</tr>
@@ -32,7 +33,7 @@
 							<a href="Editar.php?id=<?php echo $row ['id']?>">
 								Editar
 							</a>
-							<a href="Eliminar.php?id=<?php echo $row ['id']?>">
+							<a href="Eliminar.php?id=<?php echo $row ['id']?>" onclick="return ConfirmarEliminar()">
 								Eliminar
 							</a>
 						</td>
